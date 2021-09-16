@@ -280,7 +280,7 @@ class PlaceOrderViewController: UIViewController {
         composeVC.mailComposeDelegate = self
          
         // Configure the fields of the interface.
-        composeVC.setToRecipients(["buxlan51@gmail.com"])
+        composeVC.setToRecipients([Company.getCurrentCompany().emailTo ?? ""])
         
         composeVC.setSubject("New order!")
         composeVC.setMessageBody(viewModel.getMailBody(), isHTML: false)

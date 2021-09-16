@@ -11,6 +11,7 @@ struct Company: Codable {
     var displayName: String?
     var phoneNumber: String?
     var descriptionFileName: String?
+    var emailTo: String?
 }
 
 extension Company {
