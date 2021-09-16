@@ -1,0 +1,11 @@
+xcassets:
+- inputs:
+    - RepairService/Assets.xcassets
+  outputs:
+    templateName: swift5
+    output: RepairService/Sources/Assets.swift
+strings:
+  inputs: RepairService/Sources/en.lproj/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      output: RepairService/Sources/Strings.swift

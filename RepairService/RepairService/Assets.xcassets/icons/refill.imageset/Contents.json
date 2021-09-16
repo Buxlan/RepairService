@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "refill_ico.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

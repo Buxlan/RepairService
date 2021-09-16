@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ekT-PK-WfX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Place Order View Controller-->
+        <scene sceneID="cFv-sP-QV9">
+            <objects>
+                <viewController storyboardIdentifier="PlaceOrderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ekT-PK-WfX" customClass="PlaceOrderViewController" customModule="RepairService" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yiV-BL-XZQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uU1-Et-tvC" userLabel="logoView" customClass="LogoView" customModule="RepairService" customModuleProvider="target">
+                                <rect key="frame" x="20" y="44" width="374" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="msY-SV-UHH">
+                                <rect key="frame" x="20" y="172" width="374" height="690"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2jG-Aa-iKb" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="690"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Заказ на ремонт" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqu-qX-YAS">
+                                                <rect key="frame" x="111" y="8" width="153" height="38"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-AI-cdK" userLabel="Stack View 0">
+                                                <rect key="frame" x="64" y="54" width="247" height="187.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваша контактная информация:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bak-2S-tQy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="247" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ваш номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qAC-Vt-nuM">
+                                                        <rect key="frame" x="0.0" y="20.5" width="247" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя/название организации" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OWo-Mz-2jO">
+                                                        <rect key="frame" x="0.0" y="54.5" width="247" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Откуда забрать устройство" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IHM-o5-9xU">
+                                                        <rect key="frame" x="0.0" y="88.5" width="247" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ваш e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hzG-rn-edU">
+                                                        <rect key="frame" x="0.0" y="122.5" width="247" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="vDL-yz-m8n">
+                                                        <rect key="frame" x="0.0" y="156.5" width="247" height="31"/>
+                                                        <subviews>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vaE-uy-mRE">
+                                                                <rect key="frame" x="0.0" y="0.0" width="61" height="31"/>
+                                                                <connections>
+                                                                    <action selector="valueChanged:" destination="ekT-PK-WfX" eventType="valueChanged" id="De6-KT-oAC"/>
+                                                                </connections>
+                                                            </switch>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Юридическое лицо" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgP-Lp-rCN">
+                                                                <rect key="frame" x="59" y="0.0" width="188" height="31"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7MO-M6-sgX" userLabel="Stack View 1">
+                                                <rect key="frame" x="81" y="294" width="213" height="88.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваше устройство" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zm-BA-e3P">
+                                                        <rect key="frame" x="0.0" y="0.0" width="213" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Модель вашего устройства" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhi-cd-F2N">
+                                                        <rect key="frame" x="0.0" y="20.5" width="213" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Что сломалось" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wlm-Yz-wmj">
+                                                        <rect key="frame" x="0.0" y="54.5" width="213" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrI-3w-00s">
+                                                <rect key="frame" x="134" y="553" width="107" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" name="accent1"/>
+                                                <state key="normal" title="ЗАКАЗАТЬ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="placeOrderTapped:" destination="ekT-PK-WfX" eventType="touchUpInside" id="6td-J2-HM7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="7jG-Nm-Bfz"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ZVg-Kb-pZX"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="szY-Ul-PSu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="IHM-o5-9xU" id="pj2-ba-uBV"/>
+                        <outlet property="brokeDescriptionTextField" destination="Wlm-Yz-wmj" id="Ct5-yR-G2Z"/>
+                        <outlet property="companyTextField" destination="OWo-Mz-2jO" id="wDj-9c-7PO"/>
+                        <outlet property="contactsLabel" destination="bak-2S-tQy" id="Ie7-40-RFx"/>
+                        <outlet property="contentView" destination="2jG-Aa-iKb" id="ecZ-1M-GXb"/>
+                        <outlet property="deviceNameTextField" destination="Dhi-cd-F2N" id="RcZ-dI-rIM"/>
+                        <outlet property="emailTextField" destination="hzG-rn-edU" id="z9I-mi-oVd"/>
+                        <outlet property="horizontalStackView" destination="vDL-yz-m8n" id="o2g-md-LcF"/>
+                        <outlet property="isCompanyLabel" destination="kgP-Lp-rCN" id="0gR-Uo-qA1"/>
+                        <outlet property="isCompanySwitch" destination="vaE-uy-mRE" id="Q8h-fo-tTo"/>
+                        <outlet property="labelDevice" destination="1Zm-BA-e3P" id="Ek7-or-E6o"/>
+                        <outlet property="labelOrder" destination="xqu-qX-YAS" id="MOW-EJ-Mez"/>
+                        <outlet property="logoView" destination="uU1-Et-tvC" id="ZhF-Ya-PY5"/>
+                        <outlet property="phoneNumberTextField" destination="qAC-Vt-nuM" id="tJS-tL-nMd"/>
+                        <outlet property="placeOrderButton" destination="NrI-3w-00s" id="Kmx-Fc-lHi"/>
+                        <outlet property="scrollView" destination="msY-SV-UHH" id="X61-Bd-ypm"/>
+                        <outlet property="stackView0" destination="nbC-AI-cdK" id="KWi-Al-xlU"/>
+                        <outlet property="stackView1" destination="7MO-M6-sgX" id="iee-6h-F0D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qsF-E5-VaZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292.75362318840581" y="150.66964285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="accent1">
+            <color red="0.48627450980392156" green="0.72549019607843135" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
