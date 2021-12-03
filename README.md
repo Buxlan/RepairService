@@ -1,6 +1,6 @@
 # RepairService
 
-Simple App for Repair service
+Simple App for Repair service of smth
 
 Tech stack:
 - UIKit 12+
