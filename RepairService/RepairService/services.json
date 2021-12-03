@@ -1,24 +1,24 @@
 [{
-    "displayName": "Repair 0",
+    "displayName": "Замена дийсплея",
     "imageName": "repair"
 },
 {
-    "displayName": "Refill 0",
+    "displayName": "Перекраска корпуса",
     "imageName": "refill"
 },
 {
-    "displayName": "Repair 1",
+    "displayName": "Замена электронного блока",
     "imageName": "repair"
 },
 {
-    "displayName": "Refill 1",
+    "displayName": "Диагностика проблем",
     "imageName": "refill"
 },
 {
-    "displayName": "Repair 2",
+    "displayName": "Замена корпуса",
     "imageName": "repair"
 },
 {
-    "displayName": "Refill 2",
+    "displayName": "Вызов специалиста на место",
     "imageName": "refill"
 }]

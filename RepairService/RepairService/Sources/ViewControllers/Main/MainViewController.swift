@@ -76,7 +76,6 @@ class MainViewController: UIViewController {
         let view = UIButton()
         view.accessibilityIdentifier = "buttonCallUs"
         view.setImage(image, for: .normal)
-//        view.setMargins(margin: 32.0)
         view.backgroundColor = Asset.background.color
         view.setTitleColor(.black, for: .normal)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -173,7 +172,7 @@ class MainViewController: UIViewController {
     @objc
     private func aboutUsButtonTapped() {
         let vc = AboutUsViewController()
-        vc.modalTransitionStyle = .crossDissolve
+//        vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }

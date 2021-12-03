@@ -243,8 +243,8 @@
 			buildConfigurationList = 40A137E326F287A300A53CD3 /* Build configuration list for PBXNativeTarget "RepairService" */;
 			buildPhases = (
 				26649B9574BC36BFC7310B0C /* [CP] Check Pods Manifest.lock */,
-				40AB9E5D26F28C0F006B3202 /* Lint */,
 				40AB9E5E26F28C25006B3202 /* Swiftgen */,
+				40AB9E5D26F28C0F006B3202 /* Lint */,
 				40A137CB26F287A200A53CD3 /* Sources */,
 				40A137CC26F287A200A53CD3 /* Frameworks */,
 				40A137CD26F287A200A53CD3 /* Resources */,

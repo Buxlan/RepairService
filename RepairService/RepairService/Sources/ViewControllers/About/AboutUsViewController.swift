@@ -27,6 +27,26 @@ class AboutUsViewController: UIViewController, WKNavigationDelegate {
         return view
     }()
     
+    private lazy var button: UIButton = {
+        let image = Asset.repair.image.resizeImage(to: 44)
+        let view = LeftImageButton()
+        view.accessibilityIdentifier = "buttonOurServices"
+        view.setTitle(L10n.ourServices, for: .normal)
+        view.setImage(image, for: .normal)
+//        view.setMargins(margin: 32.0)
+        
+        view.backgroundColor = Asset.background.color
+        view.setTitleColor(.black, for: .normal)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 20
+        view.layer.borderColor = UIColor.black.withAlphaComponent(0.8).cgColor
+        view.layer.borderWidth = 0.5
+        view.clipsToBounds = true
+        view.contentEdgeInsets = .init(top: 0, left: 12, bottom: 0, right: 12)
+        view.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        return view
+    }()
+    
     private lazy var aboutWebView: WKWebView = {
         let jscript = "var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta);"
         let userScript = WKUserScript(source: jscript, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
@@ -66,12 +86,14 @@ class AboutUsViewController: UIViewController, WKNavigationDelegate {
         view.addSubview(mainBackgroundView)
         view.addSubview(logoView)
         view.addSubview(aboutWebView)
+        view.addSubview(button)
         
         configureConstraints()
     }
     
     private func configureConstraints() {
         let logoViewHeight: CGFloat = 120
+        let buttonsHeight: CGFloat = 60
         let constraints: [NSLayoutConstraint] = [
             mainBackgroundView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
             mainBackgroundView.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor),
@@ -87,10 +109,26 @@ class AboutUsViewController: UIViewController, WKNavigationDelegate {
             aboutWebView.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor),
             aboutWebView.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor),
             aboutWebView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor),
-            webViewHeightConstraint
+            webViewHeightConstraint,
+            
+            button.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor),
+            button.topAnchor.constraint(equalTo: aboutWebView.bottomAnchor, constant: 16),
+            button.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor),
+            button.heightAnchor.constraint(equalToConstant: buttonsHeight)
             
         ]
         NSLayoutConstraint.activate(constraints)
+    }
+    
+    @objc
+    private func buttonTapped() {
+        let storyboard = UIStoryboard(name: "PlaceOrderViewController", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()
+        guard let unwrappedVC = vc else {
+            return
+        }
+        unwrappedVC.modalPresentationStyle = .pageSheet
+        present(unwrappedVC, animated: true)
     }
 }
 

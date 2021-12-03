@@ -10,6 +10,7 @@ import UIKit
 class OurServicesViewController: UIViewController {
 
     // MARK: - Properties
+    
     private var viewModel = OurServicesViewModel()
     
     private lazy var logoView: LogoView = LogoView { [weak self] in
@@ -25,7 +26,7 @@ class OurServicesViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
+ 
     private lazy var tableView: UITableView = {
         let view = UITableView(frame: .zero, style: .plain)
         view.isUserInteractionEnabled = true
