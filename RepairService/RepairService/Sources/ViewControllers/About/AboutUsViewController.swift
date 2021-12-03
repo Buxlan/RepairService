@@ -28,10 +28,10 @@ class AboutUsViewController: UIViewController, WKNavigationDelegate {
     }()
     
     private lazy var button: UIButton = {
-        let image = Asset.repair.image.resizeImage(to: 44)
+        let image = Asset.refill.image.resizeImage(to: 44)
         let view = LeftImageButton()
         view.accessibilityIdentifier = "buttonOurServices"
-        view.setTitle(L10n.ourServices, for: .normal)
+        view.setTitle(L10n.placeOrder, for: .normal)
         view.setImage(image, for: .normal)
 //        view.setMargins(margin: 32.0)
         
